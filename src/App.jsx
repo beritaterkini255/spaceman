@@ -158,10 +158,7 @@ function App() {
 
   return (
     <>
-      <div className="relative min-h-screen bg-[url(https://hostinggambar.com/images/2025/08/10/bg-spaceman-1.webp)] bg-cover bg-center bg-no-repeat p-6 flex flex-col items-center">
-        {/* <div className="bg-black/60 z-50 absolute top-0 left-0 h-screen w-screen">
-
-        </div> */}
+      <div className="relative min-h-screen bg-[url(https://hostinggambar.com/images/2025/08/10/bg-spaceman-1.webp)] bg-cover bg-center bg-no-repeat p-2 flex flex-col items-center">
         <div className="max-w-2xl w-full">
           <header className="text-center">
             <div className="inline-block bg-violet-800/20 rounded-full px-3 py-1 text-sm text-white">▲ Spaceman</div>
@@ -183,9 +180,9 @@ function App() {
             </div>
           </header>
 
-          <section className="bg-violet-800/20 rounded-2xl p-6 shadow-lg backdrop-blur-lg">
+          <section className="bg-violet-800/20 rounded-2xl p-3 md:p-6 shadow-lg backdrop-blur-lg">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-              <div className="col-span-2 bg-white/4 p-4 rounded-md">
+              <div className="col-span-2 rounded-md">
                 <div className="bg-white/10 rounded-lg p-6 text-center">
                   <div className="text-5xl font-bold text-white">{multiplier.toFixed(2)}x</div>
                   <div className="mt-3 text-sm text-white/70">{status === 'flying' ? 'In flight' : status === 'crashed' ? 'Crashed' : status === 'cashed' ? 'Cashed out' : 'Ready'}</div>
@@ -215,7 +212,7 @@ function App() {
                 </div>
               </div>
 
-              <aside className="p-4 bg-white/4 rounded-lg">
+              <aside className="col-span-2 md:col-span-1 p-4 bg-white/4 rounded-lg">
                 <div className="mb-3 text-white/90 font-medium">Prediction</div>
                 <div className="bg-white/10 rounded p-3 text-center">
                   <div className="text-sm text-white/70">Predicted Target</div>
@@ -245,7 +242,7 @@ function App() {
                     <button className="bg-white/10 cursor-pointer rounded-r-2xl px-3" onClick={() => setAutoCash((prev) => parseFloat((prev + 0.01).toFixed(2)))}><img className="w-7" src="https://hostinggambar.com/images/2025/08/09/arrow_forward_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="arrow" /></button>
                   </div>
 
-                  <div className="mt-4 text-sm text-white/80">Bet Amount</div>
+                  <div className="my-2 text-sm text-white/80">Bet Amount</div>
                   <div className="flex">
                     <button className="bg-white/10 cursor-pointer rounded-l-2xl px-3" onClick={() => setBetAmount((prev) => parseFloat((prev - 0.01).toFixed(2)))}><img className="w-7" src="https://hostinggambar.com/images/2025/08/09/arrow_back_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="arrow" /></button>
                     <input type="number"  value={betAmount} onChange={(e) => setBetAmount(parseFloat(e.target.value) || 0)} className="border-x border-white/20 w-full text-center p-2 bg-white/10 text-white [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [appearance:textfield] focus:outline-none" />
@@ -260,10 +257,10 @@ function App() {
                 <div className="text-xs text-white/90">Last {lastMultipliers.length} rounds</div>
                 <div className="text-sm text-white/90 font-medium">Recent History</div>
               </div>
-              <div className="flex gap-4 items-center">
+              <div className="flex flex-col md:flex-row gap-4 items-center">
                 <Sparkline data={lastMultipliers} />
                 <div className="flex-1">
-                  <div className="grid md:grid-cols-4 grid-cols-3 gap-2">
+                  <div className="grid md:grid-cols-4 grid-cols-5 gap-2">
                     {history.slice(-8).reverse().map((h) => (
                       <div key={h.id} className="bg-white/10 rounded p-2 text-center text-xs">
                         <div className="font-semibold text-white">{h.crash}x</div>
