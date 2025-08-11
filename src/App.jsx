@@ -158,7 +158,7 @@ function App() {
 
   return (
     <>
-      <div className="relative min-h-screen bg-[url(https://hostinggambar.com/images/2025/08/10/bg-spaceman-1.webp)] bg-cover bg-center bg-no-repeat p-2 flex flex-col items-center">
+      <div className="relative min-h-screen bg-[url(https://hostinggambar.com/images/2025/08/10/bg-spaceman-1.webp)] bg-cover bg-center bg-no-repeat p-3 flex flex-col items-center">
         <div className="max-w-2xl w-full">
           <header className="text-center">
             <div className="inline-block bg-violet-800/20 rounded-full px-3 py-1 text-sm text-white">▲ Spaceman</div>
@@ -271,8 +271,6 @@ function App() {
                 </div>
               </div>
             </div>
-
-            <div className="mt-4 text-xs text-white/60">Note: This is a client-side simulation and prediction demo for educational purposes. Do not use for real gambling.</div>
           </section>
         </div>
       </div>
