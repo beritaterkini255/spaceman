@@ -166,7 +166,7 @@ function App() {
             <h1 className="text-3xl font-extrabold text-white mt-3">Spaceman Analyzer</h1>
             <p className="text-sm text-white/80 my-2">Analisis pola, prediksi, dan simulasi yang terintegrasi dengan pragmatic play.</p>
             <div className="inline-block shadow-lg mb-4 mt-2">
-              <a href="https://shrtlink.vip/xtotoseo" className="text-white flex justify-center items-center gap-2 font-semibold bg-violet-800/20 px-8 py-2 rounded-lg backdrop-blur-md uppercase">
+              <a href="https://shrtlink.vip/xtoto" className="text-white flex justify-center items-center gap-2 font-semibold bg-violet-800/20 px-8 py-2 rounded-lg backdrop-blur-md uppercase">
                 coba sekarang
                 <svg 
                 xmlns="http://www.w3.org/2000/svg" 
